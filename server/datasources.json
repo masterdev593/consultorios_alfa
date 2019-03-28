@@ -1,0 +1,10 @@
+{
+  "API-SERVER-CONSULTORIOS": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "mongodb://localhost:27017/api-consultorios",
+    "database": "api-consultorios",
+    "name": "API-SERVER-CONSULTORIOS",
+    "connector": "mongodb"
+  }
+}

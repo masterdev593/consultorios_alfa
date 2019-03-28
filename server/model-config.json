@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "API-SERVER-CONSULTORIOS"
+  },
+  "AccessToken": {
+    "dataSource": "API-SERVER-CONSULTORIOS",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "API-SERVER-CONSULTORIOS",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "API-SERVER-CONSULTORIOS",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "API-SERVER-CONSULTORIOS",
+    "public": false
+  },
+  "cat_contacto": {
+    "dataSource": "API-SERVER-CONSULTORIOS",
+    "public": true
+  }
+}
