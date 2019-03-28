@@ -1,0 +1,52 @@
+{
+  "name": "cat_clientes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "usuario": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "correo": {
+      "type": "string",
+      "default": "Sin correo"
+    },
+    "especialidad": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string",
+      "required": true
+    },
+    "consultorio": {
+      "type": "string",
+      "required": true
+    },
+    "contrato": {
+      "type": "string",
+      "required": true
+    },
+    "expira": {
+      "type": "date",
+      "required": true
+    },
+    "alta": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

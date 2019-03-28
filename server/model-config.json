@@ -38,5 +38,13 @@
   "cat_contacto": {
     "dataSource": "API-SERVER-CONSULTORIOS",
     "public": true
+  },
+  "cat_clientes": {
+    "dataSource": "API-SERVER-CONSULTORIOS",
+    "public": true
+  },
+  "cat_citas": {
+    "dataSource": "API-SERVER-CONSULTORIOS",
+    "public": true
   }
 }
