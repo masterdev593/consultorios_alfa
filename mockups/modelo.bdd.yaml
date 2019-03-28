@@ -1,17 +1,75 @@
+.:USUARIOS DEL SISTEMA:.
+ROLES: Administrador, Secretaria y Doctor
+
+// Tabla 1
+// Corresponde a la parte solo del "login.png" { User }
+// Ingresar al sistema, si esta logeado/registrado ingresa al panel de control, solo asi podrá hacer consultas a las tablas posteriores.
+// Verificar si es Administrador, Secretaria o Doctor. [Implementar]
+
+[
+  {
+    "email": "test@test.com",
+    "password": "123456"
+  }
+]
+
 // Tabla 2
 // Corresponde a la parte solo del "contacto.png" { cat_contacto }
-// ROLES. Los administradores del sistema pueden ver los mensajes que dejan en la sección contacto.
-// Usuario logeado puede LEER los mensajes, pero no ESCRIBIR. 
+// Deja un mensaje para un contacto futuro.
+// TODOS LOS ROLES:
+// LEER la tabla, pero no ESCRIBIR. 
 
 [
   {
     "nombre": "Jhon Doe",
     "correo": "jhon.doe@gmail.com",
-    "mensaje": "lorem ipsum dolor",
-    "id": "5c9ceb5ad5bce531481d7e05"
+    "mensaje": "lorem ipsum dolor"
   }
 ]
 
+// Tabla 3
+// Corresponde a la parte solo del "adminRegistro.png" { cat_clientes }
+// Ingresa datos correspondientes a las personas que van a alquilar los consultorios.
+// ROLES:
+// Administrador LEER, ESCRIBIR, ACTUALIZAR, BORRAR
+// Secretaria LEER, ACTUALIZAR
 
+[
+  {
+    "nombre": "Janny Doe",
+    "usuario": "jdoe",
+    "password": "123456"
+    "correo": "janny.doe@gmail.com",
+    "especialidad": "Rayos-X"
+    "telefono": "0034-789-123",
+    "consultorio": "101"
+    "contrato": "9-988"
+    "expira": "2020-01-01"
+    "alta": "currentDate"
+  }
+]
 
+// Tabla 4
+// Corresponde a la parte del "adminDrs.png" { cat_citas }
+// Cuando un usuario es registrado se le habilita el panel para poder agendar sus citas. [Relacionar]
+// ROLES:
+// Administrador LEER, ESCRIBIR, ACTUALIZAR, BORRAR
+// Secretaria LEER, ACTUALIZAR
+// Doctor LEER, ESCRIBIR, ACTUALIZAR
 
+[
+  {
+    "id_cliente": "xxxxxxxxxxxxxxxxx",
+    "nombre_paciente": "Leanne Graham",
+    "correo": "Sincere@april.biz",
+    "celular": "1-770-736-8031 x56442",
+    "fecha_cita": "10/11/2019",
+    "horario": "13:00",
+    "consultorio": "301"
+  }
+]
+
+// DASHBOARD 
+// MOSTRAR LOS DATOS EXTRAIDOS DE ESTAS TABLAS.
+// EJM. Si es Administrador mostrar los consultorios activos, todas las citas, reportes, etc...  [LÓGICA DE PROGRAMACIÓN]
+// EJM. Si es Secretaria o Doctor mostrar las citas del dia lunes del DR. JHON DOE [LÓGICA DE PROGRAMACIÓN]
