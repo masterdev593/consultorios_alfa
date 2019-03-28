@@ -1,0 +1,17 @@
+// Tabla 2
+// Corresponde a la parte solo del "contacto.png" { cat_contacto }
+// ROLES. Los administradores del sistema pueden ver los mensajes que dejan en la sección contacto.
+// Usuario logeado puede LEER los mensajes, pero no ESCRIBIR. 
+
+[
+  {
+    "nombre": "Jhon Doe",
+    "correo": "jhon.doe@gmail.com",
+    "mensaje": "lorem ipsum dolor",
+    "id": "5c9ceb5ad5bce531481d7e05"
+  }
+]
+
+
+
+
