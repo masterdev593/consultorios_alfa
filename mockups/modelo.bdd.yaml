@@ -32,7 +32,7 @@ ROLES: Administrador, Secretaria y Doctor
 // Ingresa datos correspondientes a las personas que van a alquilar los consultorios.
 // ROLES:
 // Administrador LEER, ESCRIBIR, ACTUALIZAR, BORRAR
-// Secretaria LEER, ACTUALIZAR
+// Secretaria LEER, ESCRIBIR, ACTUALIZAR
 
 [
   {
