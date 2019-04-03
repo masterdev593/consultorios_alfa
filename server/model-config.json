@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "API-SERVER-CONSULTORIOS"
+    "dataSource": "API-SERVER-CONSULTORIOS",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "API-SERVER-CONSULTORIOS",
@@ -44,6 +45,10 @@
     "public": true
   },
   "cat_citas": {
+    "dataSource": "API-SERVER-CONSULTORIOS",
+    "public": false
+  },
+  "cat_usuarios": {
     "dataSource": "API-SERVER-CONSULTORIOS",
     "public": true
   }
