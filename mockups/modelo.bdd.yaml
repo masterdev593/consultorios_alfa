@@ -2,15 +2,30 @@
 ROLES: Administrador, Secretaria y Doctor
 
 // Tabla 1
-// Corresponde a la parte solo del "login.png" { User }
+// Corresponde a la parte solo del "login.png" { cat_usuarios }
 // Ingresar al sistema, si esta logeado/registrado ingresa al panel de control, solo asi podrá hacer consultas a las tablas posteriores.
-// Verificar si es Administrador, Secretaria o Doctor. [Implementar]
+// Se agrega un campo rol para identificar al usuario ingresado.
+// El ingreso es mediante el email y/o username y su password.
 
 [
   {
-    "email": "test@test.com",
+    "rol": "administrador",
+    "username": "admin",
+    "email": "admin@gmail.com",
     "password": "123456"
-  }
+  },
+    {
+    "rol": "doctor",
+    "username": "jhon",
+    "email": "doctor.jhon@gmail.com",
+    "password": "123456"
+  },
+    {
+    "rol": "secretaria",
+    "username": "jane",
+    "email": "secretaria@gmail.com",
+    "password": "123456"
+  },
 ]
 
 // Tabla 2
@@ -26,6 +41,12 @@ ROLES: Administrador, Secretaria y Doctor
     "mensaje": "lorem ipsum dolor"
   }
 ]
+
+// Las siguientes dos tablas tienen relación.
+// En consultorios_app, los modelos que se relacionan son los siguientes:
+
+- Un cliente tiene muchas citas.
+- Las citas pertenecen a los clientes.
 
 // Tabla 3
 // Corresponde a la parte solo del "adminRegistro.png" { cat_clientes }
