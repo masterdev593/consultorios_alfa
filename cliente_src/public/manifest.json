@@ -1,0 +1,30 @@
+{
+  "short_name": "Fizzvr.pro",
+  "name": "📲 Desarrollador Web NodeJS",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "apple-touch-icon-precomposed.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "tile.png",
+      "type": "image/png",
+      "sizes": "558x558"
+    },
+    {
+      "src": "tile-wide.png",
+      "type": "image/png",
+      "sizes": "558x270"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00ff00",
+  "background_color": "#000"
+}
