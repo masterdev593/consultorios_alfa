@@ -46,7 +46,7 @@
   },
   "cat_citas": {
     "dataSource": "API-SERVER-CONSULTORIOS",
-    "public": false
+    "public": true
   },
   "cat_usuarios": {
     "dataSource": "API-SERVER-CONSULTORIOS",
