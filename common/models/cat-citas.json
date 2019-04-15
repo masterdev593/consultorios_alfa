@@ -29,6 +29,11 @@
     "consultorio": {
       "type": "string",
       "required": true
+    },
+    "estadoPago": {
+      "type": "string",
+      "required": true,
+      "default": "PENDIENTE"
     }
   },
   "validations": [],
