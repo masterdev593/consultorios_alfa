@@ -6,23 +6,7 @@
     "validateUpsert": true
   },
   "properties": {
-    "nombre_paciente": {
-      "type": "string",
-      "required": true
-    },
-    "correo": {
-      "type": "string",
-      "required": true
-    },
-    "celular": {
-      "type": "string",
-      "required": true
-    },
     "fecha_cita": {
-      "type": "date",
-      "required": true
-    },
-    "horario": {
       "type": "date",
       "required": true
     },
@@ -40,10 +24,23 @@
   "relations": {
     "clientes": {
       "type": "belongsTo",
-      "model": "cat_clientes",
-      "foreignKey": "cliente_id"
+      "model": "cat_usuarios",
+      "foreignKey": "catUsuariosId"
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "DENY"
+    }
+  ],
   "methods": {}
 }
