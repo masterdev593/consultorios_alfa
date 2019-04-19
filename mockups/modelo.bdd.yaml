@@ -6,29 +6,61 @@ ROLES: Administrador, Secretaria y Doctor
 // Ingresar al sistema, si esta logeado/registrado ingresa al panel de control, solo asi podrá hacer consultas a las tablas posteriores.
 // Se agrega un campo rol para identificar al usuario ingresado.
 // El ingreso es mediante el email y/o username y su password.
+// Se añaden alguno campos.
 
 [
   {
-    "rol": "administrador",
-    "username": "admin",
-    "email": "admin@gmail.com",
-    "password": "123456"
-  },
-    {
     "rol": "doctor",
+    "especialidad": "general",
+    "telefono": "2911274",
+    "consultorio": "101",
+    "contrato": "7899-WER",
+    "expira": "2029-04-19T22:34:19.834Z", 
+    "alta": "2019-04-19T22:34:19.834Z",
+    "realm": "dr",
     "username": "jhon",
-    "email": "doctor.jhon@gmail.com",
+    "email": "jhon.doctor@gmail.com",
     "password": "123456"
   },
-    {
+  {
     "rol": "secretaria",
-    "username": "jane",
-    "email": "secretaria@gmail.com",
+    "especialidad": "string",
+    "telefono": "string",
+    "consultorio": "string",
+    "contrato": "string",
+    "expira": "2029-04-19T22:34:19.834Z",
+    "alta": "2019-04-19T22:34:19.834Z",
+    "realm": "sec",
+    "username": "sec",
+    "email": "janny@gmail.com",
     "password": "123456"
-  },
+  }
 ]
 
 // Tabla 2
+// Corresponde a la parte del "adminDrs.png" { cat_citas }
+// Cuando un usuario es registrado se le habilita el panel para poder agendar sus citas. [Relacionar]
+// ROLES:
+// Administrador LEER, ESCRIBIR, ACTUALIZAR, BORRAR
+// Secretaria LEER, ACTUALIZAR
+// Doctor LEER, ESCRIBIR, ACTUALIZAR
+
+[
+  {
+    "fecha_cita": "2019-04-19T22:02:26.241Z",
+    "consultorio": "string",
+    "estadoPago": "CHEQUE",
+    "id": "id_cita",
+    "catUsuariosId": "id_usuario"
+  }
+]
+
+// DASHBOARD 
+// MOSTRAR LOS DATOS EXTRAIDOS DE ESTAS TABLAS.
+// EJM. Si es Administrador mostrar los consultorios activos, todas las citas, reportes, etc...  [LÓGICA DE PROGRAMACIÓN]
+// EJM. Si es Secretaria o Doctor mostrar las citas del dia lunes del DR. JHON DOE [LÓGICA DE PROGRAMACIÓN]
+
+// Tabla 3
 // Corresponde a la parte solo del "contacto.png" { cat_contacto }
 // Deja un mensaje para un contacto futuro.
 // TODOS LOS ROLES:
@@ -42,55 +74,10 @@ ROLES: Administrador, Secretaria y Doctor
   }
 ]
 
-// Las siguientes dos tablas tienen relación.
-// En consultorios_app, los modelos que se relacionan son los siguientes:
+FECHAS:
+var d = new Date();
+var n = d.toISOString();
 
-- Un cliente tiene muchas citas.
-- Las citas pertenecen a los clientes.
+FILTRAR DOS FECHAS
+{"where":{"fecha_cita":{"between":["2019-04-01T18:30:00.000Z","2019-04-05T18:30:00.000Z"]}}}
 
-// Tabla 3
-// Corresponde a la parte solo del "adminRegistro.png" { cat_clientes }
-// Ingresa datos correspondientes a las personas que van a alquilar los consultorios.
-// ROLES:
-// Administrador LEER, ESCRIBIR, ACTUALIZAR, BORRAR
-// Secretaria LEER, ESCRIBIR, ACTUALIZAR
-
-[
-  {
-    "nombre": "Janny Doe",
-    "usuario": "jdoe",
-    "password": "123456"
-    "correo": "janny.doe@gmail.com",
-    "especialidad": "Rayos-X"
-    "telefono": "0034-789-123",
-    "consultorio": "101"
-    "contrato": "9-988"
-    "expira": "2020-01-01"
-    "alta": "currentDate"
-  }
-]
-
-// Tabla 4
-// Corresponde a la parte del "adminDrs.png" { cat_citas }
-// Cuando un usuario es registrado se le habilita el panel para poder agendar sus citas. [Relacionar]
-// ROLES:
-// Administrador LEER, ESCRIBIR, ACTUALIZAR, BORRAR
-// Secretaria LEER, ACTUALIZAR
-// Doctor LEER, ESCRIBIR, ACTUALIZAR
-
-[
-  {
-    "id_cliente": "xxxxxxxxxxxxxxxxx",
-    "nombre_paciente": "Leanne Graham",
-    "correo": "Sincere@april.biz",
-    "celular": "1-770-736-8031 x56442",
-    "fecha_cita": "10/11/2019",
-    "horario": "13:00",
-    "consultorio": "301"
-  }
-]
-
-// DASHBOARD 
-// MOSTRAR LOS DATOS EXTRAIDOS DE ESTAS TABLAS.
-// EJM. Si es Administrador mostrar los consultorios activos, todas las citas, reportes, etc...  [LÓGICA DE PROGRAMACIÓN]
-// EJM. Si es Secretaria o Doctor mostrar las citas del dia lunes del DR. JHON DOE [LÓGICA DE PROGRAMACIÓN]
