@@ -8,11 +8,47 @@
   "properties": {
     "rol": {
       "type": "string",
+      "required": true,
+      "default": "doctor"
+    },
+    "especialidad": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string",
       "required": true
+    },
+    "consultorio": {
+      "type": "string",
+      "required": true
+    },
+    "contrato": {
+      "type": "string",
+      "required": true
+    },
+    "expira": {
+      "type": "date",
+      "required": true
+    },
+    "alta": {
+      "type": "date"
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "citas": {
+      "type": "hasMany",
+      "model": "cat_citas",
+      "foreignKey": "catUsuariosId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }
