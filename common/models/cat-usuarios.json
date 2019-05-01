@@ -38,7 +38,7 @@
   "relations": {
     "citas": {
       "type": "hasMany",
-      "model": "cat_citas",
+      "model": "cat_citas2",
       "foreignKey": "catUsuariosId"
     }
   },
