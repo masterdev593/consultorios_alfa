@@ -1,0 +1,54 @@
+{
+  "name": "cat_citas2",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fechaCita": {
+      "type": "date",
+      "required": false
+    },
+    "consultorio": {
+      "type": "string",
+      "required": true
+    },
+    "estadoPago": {
+      "type": "string",
+      "required": true,
+      "default": "PENDIENTE"
+    },
+    "horaInicio": {
+      "type": "date",
+      "required": true
+    },
+    "reservado": {
+      "type": "bool",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "clientes": {
+      "type": "belongsTo",
+      "model": "cat_usuarios",
+      "foreignKey": "catUsuariosId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}
