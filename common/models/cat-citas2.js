@@ -7,7 +7,7 @@ module.exports = function(catCitas) {
     message: 'Este consultorio se encuentra ocupado',
   });
   const obtenerHora = hora => {
-    const horas = moment.utc(hora).format('H a');
+    const horas = moment.utc(hora).format('H');
     let respuesta = '';
     respuesta = horas;
     return Promise.resolve(respuesta);
