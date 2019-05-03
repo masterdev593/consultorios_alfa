@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import BienvenidoPagina from '../BienvenidoPagina2/Home';
+import BienvenidoPagina from '../BienvenidoPagina';
+// import BienvenidoPagina2 from '../BienvenidoPagina2/Home';
 import DashboardPagina from '../DashboardPagina';
 import EstadoPagina from '../EstadoPagina';
 import NoEncontradoPagina from '../NoencontradoPagina';
