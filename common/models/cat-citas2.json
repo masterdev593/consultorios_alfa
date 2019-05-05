@@ -33,7 +33,7 @@
     "clientes": {
       "type": "belongsTo",
       "model": "cat_usuarios",
-      "foreignKey": "catUsuariosId"
+      "foreignKey": ""
     }
   },
   "acls": [
