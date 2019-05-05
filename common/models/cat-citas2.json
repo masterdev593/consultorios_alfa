@@ -22,10 +22,6 @@
     "horaInicio": {
       "type": "date",
       "required": true
-    },
-    "reservado": {
-      "type": "bool",
-      "default": true
     }
   },
   "validations": [],
