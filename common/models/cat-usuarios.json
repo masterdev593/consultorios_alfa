@@ -12,19 +12,23 @@
       "default": "doctor"
     },
     "especialidad": {
-      "type": "string"
+      "type": "string",
+      "default": "sin especialidad"
     },
     "telefono": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "sin telefono"
     },
     "consultorio": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "sin consultorio"
     },
     "contrato": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "sin contrato"
     },
     "expira": {
       "type": "date",
