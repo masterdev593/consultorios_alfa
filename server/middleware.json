@@ -38,6 +38,9 @@
     "helmet#noSniff": {},
     "helmet#noCache": {
       "enabled": false
+    },
+    "morgan": {
+      "params": "> API-RESPUESTA-:status :method :response-time ms - :url"
     }
   },
   "session": {},
