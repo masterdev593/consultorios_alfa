@@ -13,11 +13,14 @@ module.exports = function(app, cb) {
       password: 'edGVGD'
     },
     function(err, usuario) {
-      if (err) return cb(err);
-      console.log(
-        'Una instancia de `Usuario` ah sido creada:',
-        usuario
-      );
+      if (err) {
+        console.log('> `Usuario` por default existente');
+      } else {
+        console.log(
+          '> `Usuario` por default creado:',
+          usuario
+        );
+      }
       cb();
     }
   );
