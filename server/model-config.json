@@ -40,10 +40,6 @@
     "dataSource": "API-SERVER-CONSULTORIOS",
     "public": true
   },
-  "cat_citas": {
-    "dataSource": "API-SERVER-CONSULTORIOS",
-    "public": true
-  },
   "cat_citas2": {
     "dataSource": "API-SERVER-CONSULTORIOS",
     "public": true
