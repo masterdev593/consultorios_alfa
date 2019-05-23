@@ -1,3 +1,5 @@
+'use strict';
+
 require('dotenv').config();
 const pm2 = require('pm2');
 
@@ -15,7 +17,7 @@ pm2.connect(function() {
     NODE_ENV: 'production'
   }, function() {
     console.log(
-      'pm2 started %s with %s instances at %s max memory',
+      '> pm2 ejecutado %s con %s instancia y %s de memoria máxima',
       serverName,
       instances,
       maxMemory
