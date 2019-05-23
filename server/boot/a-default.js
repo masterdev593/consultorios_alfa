@@ -1,6 +1,8 @@
 'use strict';
 const moment = require('moment');
-
+const createDebugger = require('debug');
+const log = createDebugger('consultorios:server');
+log.enabled = true;
 module.exports = function(app, cb) {
   const fecha = moment().format('YYYY-MM-DD');
   app.models.cat_usuarios.create(
@@ -14,10 +16,10 @@ module.exports = function(app, cb) {
     },
     function(err, usuario) {
       if (err) {
-        console.log('> `Usuario` por default existente');
+        log('> BOOT: `Usuario` por default existente, Por favor cambiar la contraseña');
       } else {
-        console.log(
-          '> `Usuario` por default creado:',
+        log(
+          '> BOOT: `Usuario` por default creado:',
           usuario
         );
       }
