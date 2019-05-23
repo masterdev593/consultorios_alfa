@@ -10,7 +10,7 @@ const maxMemory = process.env.MAX_MEMORY || '390M';
 pm2.connect(function() {
   pm2.start({
     name: serverName,
-    script: 'server/production-start.js',
+    script: 'api-server/production-start.js',
     exec_mode: 'cluster',
     instances: instances,
     max_memory_restart: maxMemory,
