@@ -1,6 +1,8 @@
+'use strict';
+
 module.exports = {
 
-  db: process.env.MONGODB || process.env.MONGOHQ_URL,
+  mongods: process.env.MONGO_URL,
 
   sessionSecret: process.env.SESSION_SECRET,
 
