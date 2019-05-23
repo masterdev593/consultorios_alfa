@@ -25,6 +25,9 @@
       "params": ":status :method :response-time ms - :url"
     }
   },
+  "session": {
+    "./middlewares/sessions.js": {}
+  },
   "auth": {
     "loopback#token": {}
   },
@@ -35,7 +38,8 @@
         "extended": true
       }
     },
-    "method-override": {}
+    "method-override": {},
+    "./middlewares/cookie-parser": {}
   },
   "routes:before": {
     "helmet#xssFilter": {},
