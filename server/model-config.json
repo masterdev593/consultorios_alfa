@@ -14,38 +14,38 @@
     ]
   },
   "User": {
-    "dataSource": "API-SERVER-CONSULTORIOS",
+    "dataSource": "mongods",
     "public": false
   },
   "AccessToken": {
-    "dataSource": "API-SERVER-CONSULTORIOS",
+    "dataSource": "mongods",
     "public": false
   },
   "ACL": {
-    "dataSource": "API-SERVER-CONSULTORIOS",
+    "dataSource": "mongods",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "API-SERVER-CONSULTORIOS",
+    "dataSource": "mongods",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "API-SERVER-CONSULTORIOS",
+    "dataSource": "mongods",
     "public": false
   },
   "cat_contacto": {
-    "dataSource": "API-SERVER-CONSULTORIOS",
+    "dataSource": "mongods",
     "public": true
   },
   "cat_citas2": {
-    "dataSource": "API-SERVER-CONSULTORIOS",
+    "dataSource": "mongods",
     "public": true
   },
   "cat_usuarios": {
-    "dataSource": "API-SERVER-CONSULTORIOS",
+    "dataSource": "mongods",
     "public": true
   }
 }

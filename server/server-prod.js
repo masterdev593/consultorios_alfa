@@ -1,7 +1,8 @@
+'use strict';
+
 require('dotenv').config();
 
 const _ = require('lodash');
-const Rx = require('rx');
 const loopback = require('loopback');
 const boot = require('loopback-boot');
 const expressState = require('express-state');
@@ -13,7 +14,6 @@ const log = createDebugger('consultorios:server');
 // this may be brittle
 log.enabled = true;
 
-Rx.config.longStackSupport = process.env.NODE_DEBUG !== 'production';
 const app = loopback();
 const isBeta = !!process.env.BETA;
 
@@ -25,34 +25,34 @@ app.disable('x-powered-by');
 
 boot(app, {
   appRootDir: __dirname,
-  dev: process.env.NODE_ENV
+  dev: process.env.NODE_ENV,
 });
 
-const { db } = app.datasources;
-db.on('connected', _.once(() => log('db connected')));
+const {mongods} = app.datasources;
+mongods.on('connected', _.once(() => log('> Base de Datos conectada')));
 app.start = _.once(function() {
   const server = app.listen(app.get('port'), function() {
     app.emit('started');
     log(
-      'freeCodeCamp server listening on port %d in %s',
+      '> El servidor de ALFA CONSULTORIOS está escuchando en el puerto %d modo %s',
       app.get('port'),
       app.get('env')
     );
     if (isBeta) {
-      log('freeCodeCamp is in beta mode');
+      log('> ALFA CONSULTORIOS esta en modo BETA');
     }
-    log(`connecting to db at ${db.settings.url}`);
+    log(`> Conectando con la BDD ${mongods.settings.url}`);
   });
 
   process.on('SIGINT', () => {
-    log('Shutting down server');
+    log('> Apagando el servidor');
     server.close(() => {
-      log('Server is closed');
+      log('> El servidor esta cerrado');
     });
-    log('closing db connection');
-    db.disconnect()
+    log('> Cerrando la conexión con la BDD');
+    mongods.disconnect()
       .then(() => {
-        log('DB connection closed');
+        log('> BDD conexión cerrada');
         // exit process
         // this may close kept alive sockets
         // eslint-disable-next-line no-process-exit
