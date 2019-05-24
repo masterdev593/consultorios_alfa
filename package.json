@@ -1,9 +1,12 @@
 {
   "name": "consultorios_app_alfa",
-  "version": "1.1.1",
+  "version": "1.1.2",
+  "description": "api-server consultorios",
   "main": "api-server/server.js",
+  "private": true,
+  "license": "MIT",
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "scripts": {
     "lint": "eslint .",
@@ -40,9 +43,7 @@
     "eslint-config-loopback": "^13.1.0"
   },
   "repository": {
-    "type": "",
-    "url": ""
-  },
-  "license": "UNLICENSED",
-  "description": "consultorios_app_alfa"
+    "type": "git",
+    "url": "git@github.com:DesarrolloWebNodeJS/consultorios_alfa.git"
+  }
 }
