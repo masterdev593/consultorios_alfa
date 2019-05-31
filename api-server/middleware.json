@@ -25,9 +25,6 @@
       "params": ":status :method :response-time ms - :url"
     }
   },
-  "session": {
-    "./middlewares/sessions.js": {}
-  },
   "auth": {
     "loopback#token": {}
   },
